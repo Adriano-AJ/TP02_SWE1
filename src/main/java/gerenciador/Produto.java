@@ -21,7 +21,7 @@ public class Produto {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public int unidadeCompra() {
+	public int getUnidadeCompra() {
 		return unidadeCompra;
 	}
 	public void setUnidadeCompra(int uCompra) {

@@ -120,7 +120,7 @@
             
         </form>
 
-        <a href="listaProdutos" class="back-link">← Cancelar e Voltar</a>
+        <a href="listaProdutos" class="back-link">Cancelar e Voltar</a>
     </div>
 
 </body>

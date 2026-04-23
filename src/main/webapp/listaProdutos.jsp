@@ -98,9 +98,13 @@
         <table>
             <thead>
                 <tr>
-                	<th>Id - Produto</th>
-                    <th>Nome do Produto</th>
-                    <th>Actions</th>
+                	<th>Id</th>
+            		<th>Nome</th>
+            		<th>Descricao</th>
+            		<th>Unidade</th>
+            		<th>Qtd. Prevista</th>
+            		<th>Preco Max.</th>
+            		<th>Acoes</th>
                 </tr>
             </thead>
             <tbody>
@@ -108,8 +112,12 @@
                     <tr>
                     	<td>${p.id}</td>
                         <td>${p.nome}</td>
+                        <td>${p.descricao}</td>
+                        <td>${p.unidadeCompra}</td>
+                        <td>${p.qtdPrevistoMes}</td>
+                        <td>${p.precoMaxComprado}</td>
                         <td class="actions">
-                            <a href="/mostraProduto?id=${p.id}" class="btn-edit">editar</a>
+                            <a href="mostraProduto?id=${p.id}" class="btn-edit">editar</a>
                             <a href="removeProduto?id=${p.id}" class="btn-remove">remover</a>
                         </td>
                     </tr>
