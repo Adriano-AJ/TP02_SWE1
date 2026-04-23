@@ -1,6 +1,6 @@
 package gerenciador;
 
-public class Produtos {
+public class Produto {
 	 
 	private int id;
 	private String nome;
