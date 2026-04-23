@@ -98,6 +98,7 @@
         <table>
             <thead>
                 <tr>
+                	<th>Id - Produto</th>
                     <th>Nome do Produto</th>
                     <th>Actions</th>
                 </tr>
@@ -105,6 +106,7 @@
             <tbody>
                 <c:forEach items="${produtos}" var="p">
                     <tr>
+                    	<td>${p.id}</td>
                         <td>${p.nome}</td>
                         <td class="actions">
                             <a href="/mostraProduto?id=${p.id}" class="btn-edit">editar</a>

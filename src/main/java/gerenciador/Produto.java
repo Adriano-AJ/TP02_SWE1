@@ -24,7 +24,7 @@ public class Produto {
 	public int unidadeCompra() {
 		return unidadeCompra;
 	}
-	public void unidadeCompra(int uCompra) {
+	public void setUnidadeCompra(int uCompra) {
 		this.unidadeCompra = uCompra;
 	}
 	public String getDescricao() {

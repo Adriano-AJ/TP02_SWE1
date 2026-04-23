@@ -1,4 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,41 +14,49 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+            padding: 20px;
         }
         .card {
             background: white;
-            padding: 2.5rem;
+            padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             width: 100%;
-            max-width: 400px;
+            max-width: 500px;
         }
         h2 {
             color: #333;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
             text-align: center;
+            margin-bottom: 1.5rem;
         }
         .form-group {
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+        .form-row .form-group {
+            flex: 1;
         }
         label {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
             color: #666;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            font-weight: 600;
         }
-        input[type="text"] {
+        input[type="text"], input[type="number"] {
             width: 100%;
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: 6px;
-            box-sizing: border-box; /* Garante que o padding não aumente o tamanho do input */
-            transition: border-color 0.3s;
+            box-sizing: border-box;
+            font-size: 0.95rem;
         }
-        input[type="text"]:focus {
+        input:focus {
             outline: none;
             border-color: #007bff;
         }
@@ -67,20 +78,17 @@
         .back-link {
             display: block;
             text-align: center;
-            margin-top: 1.5rem;
+            margin-top: 1rem;
             text-decoration: none;
             color: #6c757d;
             font-size: 0.85rem;
-        }
-        .back-link:hover {
-            color: #333;
         }
     </style>
 </head>
 <body>
 
     <div class="card">
-        <h2>Novo Produto</h2>
+        <h2>Cadastrar Novo Produto</h2>
         
         <c:url value="/novoProduto" var="linkServletNovoProduto"/>
 
@@ -92,8 +100,26 @@
             </div>
 
             <div class="form-group">
-                <label for="data">Data de Abertura</label>
-                <input type="text" id="data" name="data" placeholder="dd/mm/aaaa" required />
+                <label for="descricao">Descricao</label>
+                <input type="text" id="descricao" name="descricao" placeholder="Breve descricao do item" />
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="unidadeCompra">Unidade de Compra</label>
+                    <input type="number" id="unidadeCompra" name="unidadeCompra" placeholder="Ex: 10" required />
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="qtdPrevistoMes">Qtd Prevista no Mes</label>
+                    <input type="number" id="qtdPrevistoMes" name="qtdPrevistoMes" placeholder="0" />
+                </div>
+                <div class="form-group">
+                    <label for="precoMaxComprado">Preco Max. Comprado</label>
+                    <input type="text" id="precoMaxComprado" name="precoMaxComprado" placeholder="0.00" />
+                </div>
             </div>
             
             <input type="submit" value="Salvar Produto" />
