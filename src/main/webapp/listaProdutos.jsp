@@ -1,12 +1,32 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ page import="java.util.List, gerenciador.ListaProdutosServlet"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <meta charset="ISO-8859-1">
+    <title></title>
 </head>
 <body>
+
+    <c:if test="${not empty produto}">
+        Produto ${ produto } cadastrada com sucesso!
+    </c:if>
+
+    Lista de empresas: <br />
+
+    <ul>
+        <c:forEach items="${produtos}" var="produto">
+            <li>
+                ${produto.nome}
+                <a href="/gerenciador/mostraProduto?id=${produto.id}">edita</a>
+                <a href="/gerenciador/removeProduto?id=${produto.id}">remove</a>
+            </li>
+        </c:forEach>
+    </ul>
 
 </body>
 </html>

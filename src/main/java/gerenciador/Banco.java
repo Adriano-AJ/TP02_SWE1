@@ -12,11 +12,11 @@ public class Banco {
 	    static {
 	        Produto p = new Produto();
 	        p.setId(chaveSequencial++);
-	        p.setNome("Alura");
+	        p.setNome("Caderno");
 	        
 	        Produto p2 = new Produto();
 	        p2.setId(chaveSequencial++);
-	        p2.setNome("Caelum");
+	        p2.setNome("Caneta");
 	        
 	        lista.add(p);
 	        lista.add(p2);
@@ -43,7 +43,7 @@ public class Banco {
 	        }
 	    }
 
-	    public Produto buscaEmpresaPelaId(Integer id) {
+	    public Produto buscaProdutoPelaId(Integer id) {
 	        for (Produto p : lista) {
 	            if (p.getId() == id) {
 	                return p;
