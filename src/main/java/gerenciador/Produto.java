@@ -1,3 +1,4 @@
+// Dupla: Adriano Junior de Souza Almeida e Arthur Lanzilotti Farjanes
 package gerenciador;
 
 public class Produto {
@@ -6,7 +7,7 @@ public class Produto {
 	private String nome;
 	private int unidadeCompra;
 	private String descricao;
-	private int qtdPrevistoMes;
+	private double qtdPrevistoMes;
 	private double precoMaxComprado;
 	
 	public int getId(){
@@ -33,10 +34,10 @@ public class Produto {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	public int getQtdPrevistoMes() {
+	public double getQtdPrevistoMes() {
 		return qtdPrevistoMes;
 	}
-	public void setQtdPrevistoMes(int qtdPrevisto) {
+	public void setQtdPrevistoMes(double qtdPrevisto) {
 		this.qtdPrevistoMes = qtdPrevisto;
 	}
 	public double getPrecoMaxComprado() {

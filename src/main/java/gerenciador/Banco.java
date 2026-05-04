@@ -1,3 +1,4 @@
+// Dupla: Adriano Junior de Souza Almeida e Arthur Lanzilotti Farjanes
 package gerenciador;
 
 import java.util.ArrayList;
